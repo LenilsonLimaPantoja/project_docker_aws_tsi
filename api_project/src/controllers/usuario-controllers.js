@@ -1,5 +1,5 @@
 const executeQuery = require('../../pgsql.js');
-const bcrypt = require('bcrypt');
+const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 const { v4: uuidv4 } = require('uuid');
 
@@ -9,8 +9,6 @@ const googleClient = new OAuth2Client(process.env.GOOGLE_CLIENT_ID);
 
 exports.getUsuario = async (req, res, next) => {
     try {
-        console.log('ssssssssssssssssss');
-        
         let registros = [];
         const usuario = {
             tipo: req.usuario?.tipo,  // Tipo do usuário (1 = admin, 0 = aluno)
