@@ -13,6 +13,9 @@ RUN npm install
 # Copiar o restante do código
 COPY . .
 
+# Aumentar a memória disponível para o Node.js durante o build
+ENV NODE_OPTIONS="--max-old-space-size=4096"
+
 # Construir a aplicação
 RUN npm run build
 
