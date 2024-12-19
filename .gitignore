@@ -1,0 +1,11 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+/api_project/node_modules
+/api_project/arquivos
+/front_project/node_modules
+nodemon.json
+# Ignore arquivos com chaves de acesso
+*.pem
+*.key
+*.env

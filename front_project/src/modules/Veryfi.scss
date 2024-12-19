@@ -1,0 +1,67 @@
+.container-verify {
+    display: flex;
+    flex-direction: column;
+
+    .header-topo {
+        background-color: #107321;
+        color: #fff;
+        display: flex;
+        flex-direction: column;
+        row-gap: 10px;
+
+        .area-header-topo {
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            row-gap: 10px;
+
+            p {
+                font-size: 15px;
+            }
+
+            span {
+                font-weight: bold;
+                font-size: 25px;
+            }
+        }
+
+        .verify-filter {
+            background-color: #00420c;
+            padding: 5px;
+            min-height: 25px;
+            row-gap: 10px;
+            column-gap: 50px;
+            align-items: center;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+
+            .verify-filter-area {
+                display: flex;
+                flex-grow: 1;
+
+                select {
+                    padding: 3px;
+                    outline: none;
+                    width: 100%;
+                    max-width: 400px;
+                }
+
+                .select-qtd-registros {
+                    width: 70px;
+                }
+            }
+        }
+    }
+
+    .area-verify {
+        flex-grow: 1;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        @media (max-width: 750px) {
+            padding: 0px;
+        }
+    }
+}

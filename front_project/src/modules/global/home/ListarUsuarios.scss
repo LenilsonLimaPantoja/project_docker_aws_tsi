@@ -1,0 +1,93 @@
+    .container-listar-user {
+        flex-grow: 1; // Faz com que o .body-listar-user ocupe o restante da tela
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+
+        .area-listar-user {
+            background-color: #fff;
+            overflow: hidden;
+            padding: 10px;
+            display: flex;
+            flex-direction: column;
+            row-gap: 20px;
+
+            select {
+                padding: 5px;
+                outline: none;
+                width: 100%;
+                max-width: 300px;
+                border: solid 1px #ccc;
+            }
+
+            .table-listar-user-scroll {
+                overflow: auto;
+                min-width: none;
+                border: solid 1px #ccc;
+                padding: 10px;
+
+                table {
+                    border-collapse: collapse;
+                    font-size: 11px;
+                    min-width: 1600px;
+
+                    thead {
+                        tr {
+                            border: solid 1px #ccc;
+
+                            th {
+                                padding: 10px;
+                                text-align: left;
+                            }
+                        }
+                    }
+
+                    tbody {
+                        tr {
+                            border: solid 1px #ccc;
+
+                            &:nth-child(even) {
+                                background-color: #f9f9f9;
+                            }
+
+                            td {
+                                padding: 10px;
+
+                                .opcoes {
+                                    display: flex;
+                                    flex-direction: row;
+                                    column-gap: 10px;
+
+                                    button {
+                                        padding: 5px;
+                                        border: solid 1px #ccc;
+                                        cursor: pointer;
+
+                                        svg {
+                                            font-size: 15px;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .pagination-controls{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 11px;
+                column-gap: 5px;
+                button{
+                    padding: 5px 10px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    border: solid 1px #ccc;
+                    cursor: pointer;
+                }
+            }
+        }
+    }

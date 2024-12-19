@@ -1,0 +1,23 @@
+.area-loading {
+    min-height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .loading {
+        border: solid 8px green;
+        width: 70px;
+        height: 70px;
+        border-radius: 50%;
+        border-top-color: transparent;
+        animation-name: loading;
+        animation-duration: 1s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+    }
+}
+
+@keyframes loading {
+    100% {
+        transform: rotate(360deg);
+    }
+}
