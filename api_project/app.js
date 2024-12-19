@@ -25,12 +25,7 @@ app.use(cookieParser());
 // Configuração do CORS (caso necessário) - ajustada para permitir credenciais
 app.use((req, res, next) => {
     // Lista de origens permitidas
-    const allowedOrigins = [
-        'http://localhost', 
-        'http://127.0.0.1', 
-        'http://3.138.135.207', // Endereço público da EC2
-        'http://ec2-3-138-135-207.us-east-2.compute.amazonaws.com' // DNS público da EC2
-    ];
+    const allowedOrigins = process.env.URL_CORS;
     
     // Verifica se a origem da requisição está na lista de origens permitidas
     const origin = req.headers.origin;

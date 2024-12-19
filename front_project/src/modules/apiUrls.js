@@ -1,4 +1,4 @@
-const BASE_URL = 'http://localhost:5002'
+const BASE_URL = `${process.env.REACT_APP_BASE_URL}`
 // const BASE_URL = "http://3.21.12.205:3000"
 export const apiUrls = {
     userUrl: `${BASE_URL}/usuario`,
